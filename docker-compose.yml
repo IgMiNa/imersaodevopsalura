@@ -1,0 +1,8 @@
+services:
+  api:
+    build: . # Constrói a imagem a partir do Dockerfile na raiz do projeto
+    conteiner_name: devops # Nome do Container
+    ports:
+      - "8000:8000" # Mapeia a porta 8000 do Dockerfile com EXPOSE 8000 do container
+    volumes:
+      - .:/app # Monta o diretório atual (onde está seu código) em /app dentro do container.
